@@ -1,15 +1,22 @@
+"use client";
 import Link from 'next/link';
-import React from 'react'
+import React, { use } from 'react'
 import Image from 'next/image';
 import logoImage from '@/assets/logo.png';
 import styles from './main-header.module.css';
 import MainHeaderBackground from './main-header-bg';
+import NavLink from './nav-link';
+
+
+
 /**
  * A functional component that renders the main header of the application.
  *
  * @return {React.ReactElement} The JSX element representing the main header.
- */
+*/
 const MainHeader = () => {
+
+    //RENDER
     return (
         <>
             <MainHeaderBackground />
@@ -25,13 +32,10 @@ const MainHeader = () => {
                 <nav className={styles.nav}>
                     <ul>
                         <li>
-                            <Link href="/meals">Meals</Link>
+                            <NavLink href="/meals">Meals</NavLink>
                         </li>
                         <li>
-                            <Link href="/community">Community</Link>
-                        </li>
-                        <li>
-                            <Link href="/meals/share">Share a Meal</Link>
+                            <NavLink href="/community">Community</NavLink>
                         </li>
                     </ul>
                 </nav>
